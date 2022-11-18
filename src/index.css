@@ -14,5 +14,17 @@ code {
 
 .home {
   text-align: left;
-  padding: 5%;
+}
+
+.linkstyle {
+  text-decoration: none ;
+  color: black;
+}
+
+img {
+  max-width: 100vw;
+}
+
+h2, p {
+  padding: 0 2%;
 }
