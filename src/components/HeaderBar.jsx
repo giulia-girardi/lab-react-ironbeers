@@ -1,7 +1,12 @@
+import { Link } from 'react-router-dom';
+import homeIcon from '../assets/home-icon.png'
+
 function HeaderBar() {
   return (
-    <div>
-        <img src="../assets/home-icon.png" alt="home icon" />
+    <div className='head-bar'>
+      <Link to="/">
+        <img className="icon" src={homeIcon} alt="home icon" />
+      </Link>
     </div>
   )
 }

@@ -28,3 +28,27 @@ img {
 h2, p {
   padding: 0 2%;
 }
+
+.head-bar {
+  background-color: lightblue;
+}
+
+.icon {
+  height: 30px;
+  padding: 10px;
+}
+
+.beer-image {
+  height: 150px;
+  width: 60px;
+  padding: 0 5%;
+  object-fit: cover;
+}
+
+.beer-block {
+  display: flex;
+  padding: 5%;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: left;
+}

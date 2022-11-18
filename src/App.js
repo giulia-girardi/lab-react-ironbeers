@@ -6,6 +6,7 @@ import Beers from './components/Beers';
 import RandomBeer from './components/RandomBeer';
 import NewBeer from './components/NewBeer';
 import HeaderBar from './components/HeaderBar';
+import Beer from './components/Beer';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/beers" element={<Beers />} />
         <Route path="/random-beer" element={<RandomBeer />} />
         <Route path="/new-beer" element={<NewBeer />} />
+        <Route path="/:id" element={<Beer />} />
       </Routes>
     </div>
   );
