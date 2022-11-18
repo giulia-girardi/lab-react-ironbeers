@@ -6,6 +6,7 @@ function Beer() {
     const [beer, setBeer] = useState('');
     const {id} = useParams();
 
+
     const getBeer = async (setter) => {
         const oneBeer = await fetch(`https://ih-beers-api2.herokuapp.com/beers/${id}`)
         const oneBeerParsed = await oneBeer.json();

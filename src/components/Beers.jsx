@@ -1,9 +1,13 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import HeaderBar from './HeaderBar';
+import { useNavigate } from 'react-router-dom'
+
 
 function Beers() {
     const [beers, setBeers] = useState([]);
+    const [query, setQuery] = useState('')
+    const navigate = useNavigate()
 
     const getBeers = async(setter) => {
         try{
@@ -21,9 +25,19 @@ function Beers() {
         getBeers(setBeers)
     }, []) 
 
+    const handleChange = async (event) => {
+        console.log(event)
+        setQuery(event.target.value)
+        const queriedBeer = await fetch(`https://ih-beers-api2.herokuapp.com/beers/search?q=${query}`)
+        const queriedBeerParsed = await queriedBeer.json()
+        setBeers(queriedBeerParsed)
+    }
+
+    
   return ( 
     <div>
         <HeaderBar />
+        <input value={query} type='text' onChange={handleChange}/>
         {beers ?
             <div>
                 {beers.map((beer) => {
